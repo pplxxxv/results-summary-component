@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: "Hanken Grotesk" ;
+      src:url(HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+      font-weight: 500, 700, 800;
+      font-style: normal;
+    }
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(221, 100%, 96%);
+      font-family: "Hanken Grotesk";
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .all-cards {
+      box-sizing: border-box;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      background-color: white;
+      max-width:43.7rem;
+      height: 25rem;
+      border-radius: 2rem;
+    }
+    .card-1 {
+      min-height: 100%;
+      border-radius: 2rem;
+      width: 50%;
+      color:white;
+      background: linear-gradient(to bottom,hsl(252, 100%, 67%) ,hsl(241, 81%, 54%));
+    }
+    .card-2 {
+      width: 50%;
+
+    }
+     .score-in-result {
+      background: linear-gradient(to bottom,hsl(241, 81%, 54%), hsla(252, 100%, 67%));
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 9rem;
+      height: 9rem;
+      margin: 0 auto;
+    }
+    .grey-text {
+      color:rgb(185, 185, 185);
+    }
+    .blue-text {
+      color: hsl(224, 30%, 27%);
+      font-weight: 900;
+      text-align: left;
+      margin: 0 0 0 1rem;
+      font-size:1.3rem;
+    }
+    .your-score {
+      margin-bottom: 0rem;
+      font-size: 2.5rem;
+    }
+    .text {
+      margin-top:3rem;
+    }
+    .score-max {
+      color:gray;
+    }
+    .score-value {
+      color:hsl(224, 30%, 27%);
+      font-weight: 800;
+    }
+    .card-right {
+      display:flex;
+      align-items: center;
+      gap:0.3rem;
+    }
+    .card-left-reaction {
+      background-color:hsl(0, 100%, 95%) ;
+      color:hsl(0, 100%, 67%);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0rem 1rem;
+      margin:1rem
+    }
+    .category {
+      display: flex;
+      align-items: center;
+      gap:0.8rem;
+    }
+     .card-left-memory {
+      background-color:hsl(38, 100%, 95%) ;
+      color:hsl(39, 100%, 56%);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0rem 1rem;
+      margin:1rem
+    }
+    .card-left-verbal {
+      background-color:hsl(166, 85%, 95%) ;
+      color:hsl(166, 100%, 37%);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0rem 1rem;
+      margin:1rem
+    }
+    .card-left-visual {
+      background-color:hsl(234, 100%, 96%) ;
+      color:hsl(234, 85%, 45%);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0rem 1rem;
+      margin:1rem
+    }
+    .button{
+      background-color: hsl(224, 30%, 27%);
+      color:white;
+      font-weight: 400;
+      border-radius: 3rem;
+      border-style: none;
+      padding:1rem 8rem;
+    }
+    @media (max-width: 42rem) {
+     .all-cards {
+      flex-direction: column;
+      height: auto;
+     }
+      .card-1 {
+        width: 100%;
+        border-radius:0 0 2rem 2rem;
+        padding-bottom: 1rem;
+      }
+      .card-2 {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      body {
+        background-color: unset;
+      }
+      }
+      .text {
+        margin-top: 0;
+      }
+      .button {
+        font-size: 1rem;
+        padding:1rem 9rem;
+      }
+  </style>
+</head>
+<body>
+<main>
+  <div class="all-cards">
+  <div class="card-1">
+  <p class="grey-text">Your Result</p>
+  <div class="score-in-result">
+  <h1 class="your-score">76</h1>
+  <p class="grey-text">of 100</p>
+  </div>
+  <div class="text">
+ <h2 class="gr"> Great</h2>
+  <p class="grey-text">You scored higher than 65% of the people who have taken these tests.</p>
+</div>
+  </div>
+  <div class="card-2">
+  <p class="blue-text">Summary</p>
+  <div class="reaction-card">
+<div class="card-left-reaction">
+  <div class="category">
+  <img class="img-score" src="assets/images/icon-reaction.svg" alt="icon-reaction">
+  <p>Reaction </p></div>
+  <div class="card-right">
+  <span class="score-value">80 </span>
+  <span class="score-max">/ 100</span>
+  </div>
+</div>
+</div>
+<div class="memory-card">
+  <div class="card-left-memory">
+  <div class="category">
+  <img class="img-score" src="assets/images/icon-memory.svg" alt="icon-memory">
+  <p>Memory</p></div>
+  <div class="card-right">
+  <span class="score-value">92 </span>
+  <span class="score-max">/ 100</span>
+  </div>
+  </div>
+  </div>
+<div class="verbal-card">
+<div class="card-left-verbal">
+  <div class="category">
+  <img class="img-score" src="assets/images/icon-verbal.svg" alt="icon-verbal">
+  <p>Verbal</p></div>
+  <div class="card-right">
+  <span class="score-value">61</span>
+   <span class="score-max">  / 100</span>
+  </div>
+</div>
+</div>
+<div class="visual-card">
+<div class="card-left-visual">
+  <div class="category">
+  <img class="img-score" src="assets/images/icon-visual.svg" alt="icon-visual">
+  <p>Visual</p></div>
+  <div class="card-right">
+  <span class="score-value">72 </span>
+   <span class="score-max"> / 100</span>
+  </div>
+  </div>
+  </div>
+ <button class="button">Continue</button>
+ </div>
+</div>
+  </main>
+  <footer class="attribution">
+   
+  </footer>
+</body>
+</html>
